@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Committe's - ANNFSU | Rautahat District Committe{% endblock %}
+{% block content %}
+      <!-- Committe's -->
+      <div class="container my-4">
+        <h2 class="text-center mb-4 text-black">Our Committe's</h2>
+        <form class="d-flex mb-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search result from 152 posts" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        <!-- NagarCommittes -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h3 class="text-black">Nagar Committe's ({{nagar_committes[1]}})</h3>
+            <a href="#" id="view-all" class="btn btn-danger">View All</a>
+        </div>
+        <div class="text-success">
+            <hr>
+          </div>
+        <div class="row g-4">
+         
+          <!-- Nagar Committee -->
+          {% for committes in nagar_committes[0] %}
+          <div class="col-sm-6 col-md-4">
+            <div class="committee-card">
+              <img src="{{ url_for('static', filename=committes[3]) }}" class="committee-photo w-100" alt="Group Photo">
+              <div class="p-3">
+                <h5 class="mb-2"><a class="text-black text-decoration-none" href="{{committes[0]}}">{{committes[1]}}</a></h5>
+                <p class="mb-0">
+                  <span class="chairperson">President:</span> C. {{committes[2]}}
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+         
+
+        </div>
+         <!-- CampusCommittes -->
+         <div class="d-flex justify-content-between align-items-center mt-4">
+            <h3 class="text-black">Campus Committe's ({{campus_committes[1]}})</h3>
+            <a href="#" id="view-all" class="btn btn-danger">View All</a>
+        </div>
+         <div class="text-success">
+             <hr>
+           </div>
+         <div class="row g-4">
+          {% for committes in campus_committes[0] %}
+          <div class="col-sm-6 col-md-4">
+            <div class="committee-card">
+              <img src="{{ url_for('static', filename=committes[3]) }}" class="committee-photo w-100" alt="Group Photo">
+              <div class="p-3">
+                <h5 class="mb-2"><a class="text-black text-decoration-none" href="{{committes[0]}}">{{committes[1]}}</a></h5>
+                <p class="mb-0">
+                  <span class="chairperson">President:</span> C. {{committes[2]}}
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+         </div>
+
+         <!-- Ma Vi Committes -->
+         <div class="d-flex justify-content-between align-items-center mt-4">
+            <h3 class="text-black">Ma Vi Committe's ({{mavi_committes[1]}})</h3>
+            <a href="#" id="view-all" class="btn btn-danger">View All</a>
+        </div>
+         <div class="text-success">
+             <hr>
+           </div>
+         <div class="row g-4">
+          {% for committes in mavi_committes[0] %}
+          <div class="col-sm-6 col-md-4">
+            <div class="committee-card">
+              <img src="{{ url_for('static', filename=committes[3]) }}" class="committee-photo w-100" alt="Group Photo">
+              <div class="p-3">
+                <h5 class="mb-2"><a class="text-black text-decoration-none" href="{{committes[0]}}">{{committes[1]}}</a></h5>
+                <p class="mb-0">
+                  <span class="chairperson">President:</span> C. {{committes[2]}}
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+         </div>
+      </div>
+      {% endblock %}

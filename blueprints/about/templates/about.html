@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}About us - ANNFSU | Rautahat District Committe{% endblock %}
+{% block content %}>
+
+<div class="container-fluid r text-center mt-4">
+  <h1>About Us</h1>
+  <p class="mb-0">Learn more about ANNFSU Rautahat District Committee</p>
+</div>
+
+<div class="container my-5">
+  <!-- Group Image Section -->
+  <div class="row align-items-center mb-5">
+    <div class="col-lg-6 about-image mb-2">
+      <img src="{{ url_for('static', filename=about_desc[3]) }}" alt="Committee Group Image" class="img-fluid shadow">
+    </div>
+    <div class="col-lg-6">
+      <h2>Our Mission</h2>
+      <p>
+        {{about_desc[1]|safe}}
+      </p>
+      <a href="https://annfsu.org" target="_blank" class="btn btn-danger mt-3">
+        Visit Official Website <i class="fas fa-external-link-alt ms-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Long Description Section -->
+  <div class="row">
+    <div class="col">
+      <h3 class="mb-4 text-danger">Who We Are</h3>
+      {{about_desc[2]|safe}}
+    </div>
+  </div>
+
+  <!-- Member Cards Section -->
+  <div class="mt-5">
+    <h3 class="text-danger mb-4 text-center">Our Team</h3>
+    
+    <div class="row" id="top-members">
+      {% for item in members[:3] %}
+    <div class="col-md-4 my-2">
+      <div class="card member-card shadow-sm text-center">
+        <img src="{{ url_for('static', filename=item[7]) }}" alt="Member 1 Photo" class="card-img-top mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="card-title">{{item[1]}}</h5>
+          <p class="card-text text-muted">{{item[2]}}</p>
+          <p><strong>Phone:</strong> {{item[3]}}</p>
+          <p><strong>Address:</strong> {{item[5]}}</p>
+          <a href="{{item[6]}}" class="btn btn-primary btn-sm" target="_blank">
+            <i class="fab fa-facebook me-2"></i> Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+   <div class="row" id="all-members" style="display: none;">
+    {% for item in members[3:] %}
+    <div class="col-md-4 my-2">
+      <div class="card member-card shadow-sm text-center">
+        <img src="{{ url_for('static', filename=item[7]) }}" alt="Member 1 Photo" class="card-img-top mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="card-title">{{item[1]}}</h5>
+          <p class="card-text text-muted">{{item[2]}}</p>
+          <p><strong>Phone:</strong> {{item[3]}}</p>
+          <p><strong>Address:</strong> {{item[5]}}</p>
+          <a href="{{item[6]}}" class="btn btn-primary btn-sm" target="_blank">
+            <i class="fab fa-facebook me-2"></i> Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+   </div>
+    
+    
+  </div>
+</div>
+<div class="container d-flex justify-content-center">
+  <button id="view-all-btn" class="btn btn-outline-danger">View all</button>
+
+</div>
+
+<script>
+  document.getElementById('view-all-btn').addEventListener('click', function() {
+      var allItems = document.getElementById('all-members');
+      if (allItems.style.display === 'none') {
+          allItems.style.display = 'flex';  
+          this.textContent = 'View Less';   
+      } else {
+          allItems.style.display = 'none';   
+          this.textContent = 'View All';    
+      }
+  });
+</script>
+
+{% endblock %}

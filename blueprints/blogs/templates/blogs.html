@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block title %}Blog - ANNFSU | Rautahat District Committe{% endblock %}
+{% block content %}
+
+    <!-- Events posts -->
+     
+     <div class="container mt-4">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search result from 152 posts" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+     <div class="posts mt-3">
+       <!-- Post 1 -->
+       <a href="#" class="list-group-item list-group-item-action d-flex gap-3" aria-current="true">
+        <div class="d-flex gap-2 w-100 justify-content-between flex-column">
+          <div>
+            <h1 class="mb-0 text-black">ANNFSU Welcomes New Members</h1>
+            <h6 class="text-nowrap mt-1 opacity-75">14 Nov 2024 18:50:01 GMT 5:45</h6>
+            <p class="mb-0 text-black fs-6 fs-md-5">We are excited to welcome new members to the ANNFSU Rautahat District Committee family! Together, we strive to empower students, promote academic excellence, and advocate for their rights. Join us in shaping a brighter future for the student community.</p>
+            <img src="https://picsum.photos/1080/300" class="img-fluid rounded mx-auto d-block mt-2 w-100">
+          </div>
+          <ul class="list-unstyled d-flex justify-content-between align-items-center mt-3">
+            <li>
+              <button class="btn btn-outline-danger btn-sm d-flex align-items-center">
+                <!-- Todo 
+                Make like button solid after liked 
+                -->
+         
+                <i class="fa-solid fa-heart me-2"></i> Like 1.2k
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+                <i class="fas fa-comment-alt me-2"></i> Comment 123
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-outline-primary btn-sm d-flex align-items-center">
+                <i class="fas fa-share-alt me-2"></i> Share 562
+              </button>
+            </li>
+          </ul>
+        </div>
+        
+      </a>
+      <div class="text-success">
+        <hr>
+      </div>
+      
+      <!-- Post 2 -->
+      <a href="#" class="list-group-item list-group-item-action d-flex gap-3" aria-current="true">
+        <div class="d-flex gap-2 w-100 justify-content-between flex-column">
+          <div>
+            <h1 class="mb-0">ANNFSU Welcomes New Members</h1>
+            <h6 class="text-nowrap mt-1 opacity-75">14 Nov 2024 18:50:01 GMT 5:45</h6>
+            <p class="mb-0 opacity-75 fs-6 fs-md-5">We are excited to welcome new members to the ANNFSU Rautahat District Committee family! Together, we strive to empower students, promote academic excellence, and advocate for their rights. Join us in shaping a brighter future for the student community.</p>
+            <img src="https://picsum.photos/1080/300" class="img-fluid rounded mx-auto d-block mt-2 w-100">
+          </div>
+          <ul class="list-unstyled d-flex justify-content-between align-items-center mt-3">
+            <li>
+              <button class="btn btn-outline-danger btn-sm d-flex align-items-center">
+                <!-- Todo 
+                Make like button solid after liked 
+                -->
+         
+                <i class="fa-solid fa-heart me-2"></i> Like 1.2k
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+                <i class="fas fa-comment-alt me-2"></i> Comment 123
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-outline-primary btn-sm d-flex align-items-center">
+                <i class="fas fa-share-alt me-2"></i> Share 562
+              </button>
+            </li>
+          </ul>
+        </div>
+      </a>
+      <div class="text-success">
+        <hr>
+      </div>
+      <!-- post 3 -->
+      <a href="#" class="list-group-item list-group-item-action d-flex gap-3" aria-current="true">
+        <div class="d-flex gap-2 w-100 justify-content-between flex-column">
+          <div>
+            <h1 class="mb-0">ANNFSU Welcomes New Members</h1>
+            <h6 class="text-nowrap mt-1 opacity-75">14 Nov 2024 18:50:01 GMT 5:45</h6>
+            <p class="mb-0 opacity-75 fs-6 fs-md-5">We are excited to welcome new members to the ANNFSU Rautahat District Committee family! Together, we strive to empower students, promote academic excellence, and advocate for their rights. Join us in shaping a brighter future for the student community.</p>
+           
+          </div>
+          <ul class="list-unstyled d-flex justify-content-between align-items-center mt-3">
+            <li>
+              <button class="btn btn-outline-danger btn-sm d-flex align-items-center">
+                <!-- Todo 
+                Make like button solid after liked 
+                -->
+         
+                <i class="fa-solid fa-heart me-2"></i> Like 1.2k
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+                <i class="fas fa-comment-alt me-2"></i> Comment 123
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-outline-primary btn-sm d-flex align-items-center">
+                <i class="fas fa-share-alt me-2"></i> Share 562
+              </button>
+            </li>
+          </ul>
+        </div>
+        
+      </a>
+      <div class="text-success">
+        <hr>
+      </div>
+     </div>
+     <!-- paginations -->
+     <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+     </div>
+    
+     {% endblock %}

@@ -1,0 +1,62 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block title %}Home - ANNFSU | Rautahat District Committe{% endblock %}
+{% block content %}
+
+
+<!-- heroSection -->
+
+<div class="px-4 pt-4 my-4 text-center border-bottom">
+    <h1 class="display-4 fw-bold  text-danger">ANNFSU Gaur Team</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+     
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="https://media.istockphoto.com/id/1321029825/photo/portrait-of-business-team.jpg?s=612x612&w=0&k=20&c=r_mjz8nYxz7LyqL1zByr5iYxcnV48dzYwyXcXHyeE4k=" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col">
+          <h3 class="mb-4 text-danger text-center">Who We Are</h3>
+          <p class="text-black">
+            The All Nepal National Free Students Union (ANNFSU) is a progressive student organization dedicated to fostering leadership, enhancing academic standards, and addressing student concerns across the country. Established with the vision of empowering youth and promoting democracy in education, ANNFSU has played a significant role in shaping the academic and social landscape of Nepal.
+         
+        <br>
+        <br>
+            At the Rautahat District Committee, we focus on localized efforts to connect students with opportunities for growth and advocacy. From organizing educational campaigns to supporting student welfare programs, our committee is at the forefront of creating positive change in the district.
+       
+         <br>
+         <br>
+            With a dedicated team of passionate individuals, we aim to provide a platform for every student to voice their opinions, explore their potential, and make a lasting impact. Together, we are building a stronger, more inclusive student community for the future.
+          </p>
+        </div>
+      </div>
+  </div>
+        <div class="container">
+             <!-- Member Cards Section -->
+         <div class="row mt-2">
+            <h3 class="text-danger mb-4 text-center">Our Team</h3>
+            <!-- Member 1 -->
+            <div class="col-md-4 my-2">
+                <div class="card member-card shadow-sm text-center">
+                  <img src="{ url_for('static', filename=item[7]) }" alt="Member 1 Photo" class="card-img-top mx-auto mt-3">
+                  <div class="card-body">
+                    <h5 class="card-title">{item[1]}</h5>
+                    <p class="card-text text-muted">{item[2]}</p>
+                    <p><strong>Phone:</strong> {item[3]}</p>
+                    <p><strong>Address:</strong> {item[5]}</p>
+                    <a href="{item[6]}" class="btn btn-primary btn-sm" target="_blank">
+                      <i class="fab fa-facebook me-2"></i> Facebook
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+              
+      {% endblock %}

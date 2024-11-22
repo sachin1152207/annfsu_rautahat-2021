@@ -1,0 +1,8 @@
+{
+    "DatabaseConfig":{
+        "HOST":"localhost",
+        "USER":"root",
+        "PASSWORD":"",
+        "DATABASE":"annfsu-rautahat-2081"
+    }
+}
